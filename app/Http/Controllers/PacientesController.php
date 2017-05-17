@@ -21,7 +21,8 @@ class PacientesController extends Controller
     public function index()
     {
     	// executando o script de select dos pacientes
-    	$pacientes = DB::select('SELECT * FROM paciente');
+        dd(DB::select('show tables;'));
+    	//$pacientes = DB::select('SELECT * FROM paciente');
 
     	// redirecionar para a pagina index com a listagem dos pacientes
     	return view('pacientes.index', compact('pacientes'));
