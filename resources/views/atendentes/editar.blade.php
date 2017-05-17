@@ -5,7 +5,7 @@
 <div class="container">
 	<h1>Editar Atendente</h1>
 
-	<a href="/">Voltar para listagem</a>
+	<a href="/atendente">Voltar para listagem</a>
 	<br>
 	<br>
 

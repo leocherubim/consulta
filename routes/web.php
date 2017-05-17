@@ -1,17 +1,6 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-/*
  * Rotas para pacientes
  */
 // listagem de pacientes
@@ -42,3 +31,35 @@ Route::get('/atendente/editar/{id}', 'AtendentesController@editar');
 Route::post('/atendente/atualizado/{id}', 'AtendentesController@efetuarAtualizacao');
 // rota para remocao do atendente
 Route::get('/atendente/deletar/{id}', 'AtendentesController@deletar');
+
+/*
+ * Rotas para medicos
+ */
+// listagem de medicos
+Route::get('/medico', 'MedicosController@index');
+// formulario de medico
+Route::get('/medico/cadastrar', 'MedicosController@cadastrar');
+// rota POST para o cadastro das informacoes
+Route::post('/medico/registrado', 'MedicosController@efetuarCadastro');
+// formulario de edicao de medico
+Route::get('/medico/editar/{id}', 'MedicosController@editar');
+// rota POST para atualizacao do medico
+Route::post('/medico/atualizado/{id}', 'MedicosController@efetuarAtualizacao');
+// rota para remocao do medico
+Route::get('/medico/deletar/{id}', 'MedicosController@deletar');
+
+/*
+ * Rotas para clinica
+ */
+// listagem de clinicas
+Route::get('/clinica', 'ClinicasController@index');
+// formulario de clinica
+Route::get('/clinica/cadastrar', 'ClinicasController@cadastrar');
+// rota POST para o cadastro das informacoes
+Route::post('/clinica/registrado', 'ClinicasController@efetuarCadastro');
+// formulario de edicao de clinica
+Route::get('/clinica/editar/{id}', 'ClinicasController@editar');
+// rota POST para atualizacao do clinica
+Route::post('/clinica/atualizado/{id}', 'ClinicasController@efetuarAtualizacao');
+// rota para remocao do clinica
+Route::get('/clinica/deletar/{id}', 'ClinicasController@deletar');

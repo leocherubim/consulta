@@ -1,8 +1,8 @@
 # criação do banco
-CREATE DATABASE consulta;
+--CREATE DATABASE consulta;
 
 # usando o banco de dados
-USE consulta;
+--USE consulta;
 
 # criacao da tabela paciente
 CREATE TABLE Paciente (
@@ -35,41 +35,41 @@ CREATE TABLE Atendente (
 CREATE TABLE Medico (
 	IdMedico int unsigned not null auto_increment,
 	NomeMedico varchar(60) not null default '',
-	CPF varchar(15) not null,
+	CPF varchar(15) not null default '',
 	Especialidade varchar(40) not null default '',
-	CRM varchar(20) not null,
-	RG varchar(15) not null,
+	CRM varchar(20) not null default '',
+	RG varchar(15) not null default '',
 	PRIMARY KEY(IdMedico)
 );
 
 # criacao da tabela clinica
 CREATE TABLE Clinica (
 	IdClinica int unsigned not null auto_increment,
-	UF char(2) not null,
-	Telefone varchar(20),
+	UF varchar(2) not null default '',
+	Telefone varchar(20) default '',
 	NomeClinica varchar(60) not null default '',
-	Endereco varchar(250),
-	CEP varchar(15) not null,
-	Email varchar(30) not null,
-	CNPJ varchar(20) not null,
+	Endereco varchar(250) default '',
+	CEP varchar(15) not null default '',
+	Email varchar(30) not null default '',
+	CNPJ varchar(20) not null default '',
 	PRIMARY KEY(IdClinica)
 );
 
 #criacao da tabela consulta
-CREATE TABLE Consulta (
-	IdConsulta int unsigned not null auto_increment,
-	IdPaciente int unsigned,
-	IdAtendente int unsigned,
-	IdMedico int unsigned,
-	IdClinica int unsigned,
-	PrescricaoMedica varchar(255),
-	DtRetorno date,
-	Encaminhamento varchar(50),
-	HoraConsulta time not null,
-	DtConsulta date not null,
-	PRIMARY KEY(IdConsulta),
-	CONSTRAINT fk_Consulta_Paciente FOREIGN KEY (IdPaciente) REFERENCES Paciente(IdPaciente),
-	CONSTRAINT fk_Consulta_Atendente FOREIGN KEY (IdPaciente) REFERENCES Atendente(IdAtendente),
-	CONSTRAINT fk_Consulta_Medico FOREIGN KEY (IdMedico) REFERENCES Medico(IdMedico),
-	CONSTRAINT fk_Consulta_Clinica FOREIGN KEY (IdClinica) REFERENCES Clinica(IdClinica)
-);
+-- CREATE TABLE Consulta (
+-- 	IdConsulta int unsigned not null auto_increment,
+-- 	IdPaciente int unsigned,
+-- 	IdAtendente int unsigned,
+-- 	IdMedico int unsigned,
+-- 	IdClinica int unsigned,
+-- 	PrescricaoMedica varchar(255),
+-- 	DtRetorno date,
+-- 	Encaminhamento varchar(50),
+-- 	HoraConsulta time not null,
+-- 	DtConsulta date not null,
+-- 	PRIMARY KEY(IdConsulta),
+-- 	CONSTRAINT fk_Consulta_Paciente FOREIGN KEY (IdPaciente) REFERENCES Paciente(IdPaciente),
+-- 	CONSTRAINT fk_Consulta_Atendente FOREIGN KEY (IdPaciente) REFERENCES Atendente(IdAtendente),
+-- 	CONSTRAINT fk_Consulta_Medico FOREIGN KEY (IdMedico) REFERENCES Medico(IdMedico),
+-- 	CONSTRAINT fk_Consulta_Clinica FOREIGN KEY (IdClinica) REFERENCES Clinica(IdClinica)
+-- );
