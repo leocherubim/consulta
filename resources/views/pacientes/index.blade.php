@@ -10,16 +10,16 @@
 	<table class="table">
 		<!-- Nome das colunas -->
 		<tr>
-			<td>ID</td>
-			<td>Nome</td>
-			<td>CPF</td>
-			<td>Nome da Pai</td>
-			<td>Nome da Mãe</td>
-			<td>RG</td>
-			<td>Endereço</td>
-			<td>Telefone</td>
-			<td>E-mail</td>
-			<td>Ações</td>
+			<th>ID</th>
+			<th>Nome</th>
+			<th>CPF</th>
+			<th>Nome da Pai</th>
+			<th>Nome da Mãe</th>
+			<th>RG</th>
+			<th>Endereço</th>
+			<th>Telefone</th>
+			<th>E-mail</th>
+			<th>Ações</th>
 		</tr>
 
 		@foreach($pacientes as $paciente)

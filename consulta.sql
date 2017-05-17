@@ -21,12 +21,12 @@ CREATE TABLE Paciente (
 # criacao da tabela atendente
 CREATE TABLE Atendente (
 	IdAtendente int unsigned not null auto_increment,
-	DataNascimento date not null,
-	CPF varchar(15) not null,
-	Endereco varchar(250),
-	Email varchar(30) not null,
-	RG varchar(15) not null,
-	Pis varchar(20) not null,
+	DataNascimento varchar(40) not null default '',
+	CPF varchar(15) not null default '',
+	Endereco varchar(250) default '',
+	Email varchar(30) not null default '',
+	RG varchar(15) not null default '',
+	Pis varchar(20) not null default '',
 	NomeAtendente varchar(60) not null default '',
 	PRIMARY KEY(IdAtendente)
 );

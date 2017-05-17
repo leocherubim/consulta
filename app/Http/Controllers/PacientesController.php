@@ -78,7 +78,10 @@ class PacientesController extends Controller
     {
     	// Script de select para recuperar o Paciente pela chave primaria.
     	// O retorno sera um vetor com uma posicao e sera chamado a posicao 0
-    	$paciente = DB::select('SELECT * FROM Paciente WHERE IdPaciente = ?', array($id))[0];
+    	$retornoListaPaciente = DB::select('SELECT * FROM Paciente WHERE IdPaciente = ?', array($id));
+        // o script retorna uma lista com apenas o unico paciente encontrado
+        // e este paciente e passado como a posicao 0 da lista
+        $paciente = $retornoListaPaciente[0];
     	
     	// redirecinar para a pagina com o formulario de edicao
     	return view('pacientes.editar', compact('paciente'));

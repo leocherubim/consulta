@@ -44,9 +44,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
-                        <li>
-                            <a href="/">Pacientes</a>
-                        </li>
+                        <li><a href="/">Pacientes</a></li>
+                        <li><a href="/atendente">Atendentes</a></li>
                     </ul>
                 </div>
             </div>
