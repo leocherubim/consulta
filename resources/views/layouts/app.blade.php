@@ -48,6 +48,7 @@
                         <li><a href="/atendente">Atendentes</a></li>
                         <li><a href="/medico">Médicos</a></li>
                         <li><a href="/clinica">Clínica</a></li>
+                        <li><a href="/consulta">Consulta</a></li>
                     </ul>
                 </div>
             </div>

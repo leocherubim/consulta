@@ -63,3 +63,19 @@ Route::get('/clinica/editar/{id}', 'ClinicasController@editar');
 Route::post('/clinica/atualizado/{id}', 'ClinicasController@efetuarAtualizacao');
 // rota para remocao do clinica
 Route::get('/clinica/deletar/{id}', 'ClinicasController@deletar');
+
+/*
+ * Rotas para consulta
+ */
+// listagem de consultas
+Route::get('/consulta', 'ConsultasController@index');
+// formulario de consultas
+Route::get('/consulta/cadastrar', 'ConsultasController@cadastrar');
+// rota POST para o consulta das informacoes
+Route::post('/consulta/registrado', 'ConsultasController@efetuarCadastro');
+// formulario de edicao de consulta
+Route::get('/consulta/editar/{id}', 'ConsultasController@editar');
+// rota POST para atualizacao do consulta
+Route::post('/consulta/atualizado/{id}', 'ConsultasController@efetuarAtualizacao');
+// rota para remocao do consulta
+Route::get('/consulta/deletar/{id}', 'ConsultasController@deletar');
