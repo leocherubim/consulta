@@ -155,7 +155,7 @@ class ConsultasController extends Controller
         DB::insert('UPDATE Consulta SET '
             .'IdPaciente = ?, IdAtendente = ?, IdMedico = ?, IdClinica = ?, PrescricaoMedica = ?, ' 
             .'DtRetorno = ?, Encaminhamento = ?, HoraConsulta = ?, DtConsulta = ? '
-            .'WHERE IdPaciente = ?', array($idPaciente, $idAtendente, $idMedico, 
+            .'WHERE IdConsulta = ?', array($idPaciente, $idAtendente, $idMedico, 
                 $idClinica, $prescricaoMedica, $dataRetorno, $encaminhamento, $horaConsulta, $dataConsulta, $id)
         );
 
